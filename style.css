@@ -1,1 +1,108 @@
 /* Put your custom CSS here */
+
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.select-content {
+  width: 50%;
+  padding: 1rem;
+}
+
+.select-content p {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #afafaf;
+  font-size: 2vmin;
+}
+
+.select-content select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #3b3b3b;
+  padding: 1rem;
+  font-size: 4vmin;
+  background-color: white;
+  color: #3b3b3b;
+}
+
+.select-content select:focus {
+  outline: none;
+}
+
+.movie-details {
+  width: 30%;
+  margin: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 2px 2px 3px 3px rgb(218, 218, 218);
+}
+
+.movie-details img {
+  width: 100%;
+}
+
+.movie-details h2 {
+  margin: .5rem;
+  margin-left: 0;
+  padding: .8rem;
+  padding-bottom: 0;
+  color: #303030;
+  font-size: 4vmin;
+}
+
+.movie-details p {
+  margin-top: .1rem;
+  font-size: 3vmin;
+  padding: .8rem;
+  padding-top: 0;
+  line-height: 1.6em;
+  color: #4e4e4e;
+}
+
+@media (max-width: 950px){
+  .movie-details {
+    width: 40%;
+  }
+}
+
+
+@media (max-width: 700px){
+  .container{
+    flex-direction: column;
+  }
+
+  .select-content {
+    width: 100%;
+  }
+
+  .movie-details {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .select-content p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 500px){
+  .select-content p, .movie-details p {
+    font-size: 1.1rem;
+  }
+
+  .select-content select, .movie-details h2 {
+    font-size: 1.7rem;
+  }
+}
